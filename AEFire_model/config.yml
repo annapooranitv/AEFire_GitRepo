@@ -1,0 +1,37 @@
+
+# Data Files
+training_data_file: Acoustic_Extinguisher_Fire_Dataset.csv
+# test_data_file: test.csv
+# Variables
+# The variable we are attempting to predict fire extinction status (status)
+target: STATUS
+
+pipeline_name: AEFire_model
+pipeline_save_file: AEFire__model_output_v
+
+features:      # final features to be use
+  - SIZE
+  - FUEL
+  - FREQUENCY
+  - DESIBEL
+  - DISTANCE
+  - AIRFLOW
+
+fuel_var: FUEL  # first imputatation , then --> Mappeing
+
+fuel_mappings:
+  gasoline: 0
+  kerosene: 1
+  lpg: 2
+  thinner: 3
+
+# set train/test split
+test_size: 0.20
+
+# to set the random seed
+random_state: 42
+
+# alogrithm parameters
+min_samples_leaf: 4
+max_depth: 4
+max_features: 3

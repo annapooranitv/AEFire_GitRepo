@@ -1,0 +1,11 @@
+uvicorn>=0.16.0,<0.18.0
+fastapi>=0.64.0,<1.0.0
+requests>=2.23.0,<2.24.0
+pydantic
+pydantic-settings
+
+
+AEFire_model_api/aefire_model-0.0.1-py3-none-any.whl
+
+# If uploded your package in PyPI then use the given below
+#titanic-model==0.0.1
