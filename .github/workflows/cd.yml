@@ -15,13 +15,13 @@ jobs:
       - name: Pull Docker Image
         env: 
           DOCKER_USER: ${{ secrets.DOCKER_USER_NAME }}
-        run: sudo docker pull $DOCKER_USER/AEFire-fastapi:latest
+        run: sudo docker pull $DOCKER_USER/aefire-fastapi:latest
     
       - name: Delete Old Docker Container
-        run: sudo docker rm -f AEFire-fastapi-container || true
+        run: sudo docker rm -f aefire-fastapi-container || true
     
       - name: Run Docker Container
         env: 
           DOCKER_USER: ${{ secrets.DOCKER_USER_NAME }}
-        run: sudo docker run -it -d -p 9001:9001 --name AEFire-fastapi-container $DOCKER_USER/AEFire-fastapi:latest
+        run: sudo docker run -it -d -p 9001:9001 --name aefire-fastapi-container $DOCKER_USER/aefire-fastapi:latest
 
