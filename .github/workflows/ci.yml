@@ -19,7 +19,7 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirements/requirements.txt
     - name: Train and save pipeline
-      run: python titanic_model/train_pipeline.py
+      run: python AEFire_model/train_pipeline.py
     - uses: actions/upload-artifact@v4
       with:
         name: my-trained-pipeline
